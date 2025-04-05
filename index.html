@@ -76,7 +76,6 @@
         <!-- Swiper Image Slider -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <!-- Corrected Image Paths with Smaller Size -->
                 <div class="swiper-slide">
                     <img src="images/crane1.jpg" alt="Crane in action">
                 </div>
@@ -85,6 +84,12 @@
                 </div>
                 <div class="swiper-slide">
                     <img src="images/earth-moving1.jpg" alt="Earth moving project">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/crane1.jpg" alt="Crane in operation">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/crane2.jpg" alt="Heavy lifting">
                 </div>
             </div>
             <!-- Add Pagination -->
@@ -103,6 +108,8 @@
         // Initialize Swiper for Image Slider
         var swiper = new Swiper('.swiper-container', {
             loop: true,
+            slidesPerView: 3,  // Show 3 images at a time
+            spaceBetween: 10,   // Space between images
             autoplay: {
                 delay: 3000, // Change slides every 3 seconds
                 disableOnInteraction: false,
