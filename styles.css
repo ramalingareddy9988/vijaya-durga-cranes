@@ -1,204 +1,69 @@
-/* General Reset */
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background-color: #f4f4f4;
 }
 
-/* Set the background to black and white text */
-body {
-    background-color: #000; /* Black background */
-    color: #fff; /* White text */
-    font-family: Arial, sans-serif;
-    text-align: center;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Header Section */
 header {
-    padding: 50px 20px;
-    background-color: #111; /* Darker black background for header */
+    background-color: #333;
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
-.logo-container {
-    margin-bottom: 20px;
-}
-
-.logo {
-    width: 150px;
-    height: auto;
-}
-
-h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-header p {
-    font-size: 18px;
-    font-weight: 300;
-    color: #ccc; /* Lighter gray text for description */
-}
-
-/* Navigation Menu */
-nav ul {
-    list-style-type: none;
+header nav ul {
+    list-style: none;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
 }
 
-nav ul li {
-    display: inline-block;
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
 }
 
-nav ul li a {
-    color: #fff;
+header nav ul li a {
+    color: white;
     text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: #f06; /* Soft red hover effect */
-}
-
-/* Floating Contact Us Box */
-.contact-box {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #222; /* Dark gray background */
-    padding: 20px;
-    width: 250px;
-    height: 250px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
     font-size: 16px;
-    z-index: 999;
-}
-
-.contact-box h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.contact-box p {
-    margin: 5px 0;
-}
-
-/* Sections */
-section {
-    padding: 40px 20px;
-    margin: 20px 0;
 }
 
 h2 {
-    font-size: 32px;
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-/* Services Section */
-.services {
-    background-color: #222; /* Dark gray background for services */
-    border-radius: 8px;
-    padding: 40px;
-    margin-bottom: 30px;
+    color: #333;
 }
 
 .service {
-    background-color: #333; /* Slightly lighter gray for each service box */
-    padding: 20px;
-    margin-bottom: 30px;
-    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-.service h3 {
-    font-size: 28px;
-    color: #fff;
-    margin-bottom: 15px;
-}
-
-.service p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #ccc; /* Light gray text for descriptions */
-}
-
-.service ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.service ul li {
-    font-size: 18px;
-    margin: 10px 0;
-    color: #fff;
-}
-
-/* About Section */
-#about p {
-    font-size: 18px;
-    color: #ccc; /* Light gray text for about section */
-}
-
-/* Contact Section */
-.contact {
-    background-color: #222; /* Dark gray background for contact section */
-    border-radius: 8px;
-    padding: 40px;
-    margin-top: 20px;
-}
-
-.contact p {
-    font-size: 18px;
-    color: #ccc; /* Light gray text */
-}
-
-/* Images Section */
 .image-gallery {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-around;
     margin-top: 20px;
 }
 
 .image-gallery img {
-    width: 250px;
-    height: 150px;
+    width: 300px;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px;
 }
 
-@media (max-width: 768px) {
-    .logo {
-        width: 120px;
-    }
+/* Add styles for floating contact box */
+.contact-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
 
-    h1 {
-        font-size: 28px;
-    }
-
-    .services h2, .contact h2 {
-        font-size: 28px;
-    }
-
-    .image-gallery img {
-        width: 100%;
-        height: auto;
-    }
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
 }
