@@ -1,43 +1,108 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a colorful gradient background */
+body {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient from pink to orange */
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Header Section */
+header {
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Transparent dark background */
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 150px; /* Adjust logo size */
+    height: auto;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+header p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #fff;
+}
+
 /* Services Section */
 .services {
     padding: 40px 20px;
-    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for a cleaner look */
+    background-color: rgba(255, 255, 255, 0.2); /* Light transparent background */
     margin: 20px 0;
+    border-radius: 8px;
 }
 
 .services h2 {
     font-size: 32px;
     margin-bottom: 30px;
-    color: #f06; /* Match the theme with your brand color */
+    color: #fff;
 }
 
 .service {
-    margin: 40px 0;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark background for each service */
-    color: white;
-    border-radius: 8px; /* Rounded corners for each service */
+    margin: 20px 0;
 }
 
 .service h3 {
-    font-size: 28px;
-    margin-bottom: 15px;
+    font-size: 24px;
+    margin-bottom: 10px;
     color: #fff;
 }
 
 .service p {
     font-size: 18px;
-    line-height: 1.6;
+    color: #fff;
 }
 
-.service ul {
-    list-style-type: disc;
-    margin-left: 20px;
+/* Contact Section */
+.contact {
+    padding: 40px 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background for contact section */
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contact p {
     font-size: 18px;
+    color: #fff;
 }
 
-.service ul li {
-    margin-bottom: 10px;
+/* Make everything responsive */
+@media (max-width: 768px) {
+    .logo {
+        width: 120px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .services h2, .contact h2 {
+        font-size: 28px;
+    }
 }
