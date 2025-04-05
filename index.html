@@ -1,25 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vijaya Durga Cranes Kadapa</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Include Swiper.js for image slider -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        /* Image Gallery Section */
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .gallery img {
+            width: 300px; /* Adjust image size */
+            height: auto;
+            cursor: pointer;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05); /* Zoom effect on hover */
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
     <!-- Header Section -->
     <header>
-        <div class="logo-container">
-            <img src="logo.png" alt="Vijaya Durga Cranes Kadapa" class="logo">
-        </div>
         <h1>Welcome to Vijaya Durga Cranes Kadapa</h1>
-        <p>Your trusted partner for heavy machinery and earth-moving services in Kadapa.</p>
-
-        <!-- Navigation Menu -->
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -31,95 +108,41 @@
         </nav>
     </header>
 
-    <!-- Floating Contact Box -->
-    <div class="contact-box">
-        <h3>Contact Us</h3>
-        <p><strong>Address:</strong> D No 74/142-2, Builtop Road, Kadapa City, Kadapa - 516001</p>
-        <p><strong>Phone:</strong> +91 94410 72815</p>
-        <p><strong>Email:</strong> vijayadurgacraneskadapa@gmail.com</p>
-    </div>
-
-    <!-- Home Section -->
-    <section id="home">
-        <h2>Welcome to Vijaya Durga Cranes Kadapa!</h2>
-        <p>We are your trusted partner for all crane rental and earth-moving needs. With years of experience, we specialize in providing heavy machinery solutions for your projects in Kadapa and surrounding areas.</p>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="service">
-            <h3>Crane Rental</h3>
-            <p>We offer a wide range of crane rental services for construction projects, heavy lifting, and more. Whether you need to lift steel beams, heavy machinery, or large equipment, we have the right crane for the job.</p>
-        </div>
-
-        <div class="service">
-            <h3>Earth Moving</h3>
-            <p>Our earth-moving services cover all aspects of excavation, grading, land clearing, and more. Whether you're working on a small residential site or a large industrial project, we have the equipment and expertise to get the job done right.</p>
-        </div>
-
-        <div class="service">
-            <h3>Heavy Equipment Transport</h3>
-            <p>We also specialize in the transport of heavy equipment to and from your construction sites. Our fleet of heavy-duty trucks can transport everything from cranes to bulldozers and more.</p>
-        </div>
-    </section>
-
-    <!-- About Us Section -->
-    <section id="about">
-        <h2>About Us</h2>
-        <p>Vijaya Durga Cranes Kadapa has been serving the Kadapa region for years, providing top-notch crane rental and earth-moving services for both residential and commercial projects. Our commitment to safety, efficiency, and quality makes us a preferred partner for all heavy machinery needs.</p>
-    </section>
-
-    <!-- Images Section (Image Slider) -->
+    <!-- Images Section -->
     <section id="images">
         <h2>Our Work</h2>
-        <!-- Swiper Image Slider -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="images/crane1.jpg" alt="Crane in action">
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/crane2.jpg.avif" alt="Lifting heavy equipment">
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/earth-moving1.jpg" alt="Earth moving project">
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/crane1.jpg" alt="Crane in operation">
-                </div>
-                <div class="swiper-slide">
-                    <img src="images/crane2.jpg" alt="Heavy lifting">
-                </div>
-            </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
+        <div class="gallery">
+            <img src="crane1.jpg" alt="Crane 1" class="image-thumb" onclick="openLightbox(this)">
+            <img src="crane2.jpg" alt="Crane 2" class="image-thumb" onclick="openLightbox(this)">
+            <img src="earth-moving1.jpg" alt="Earth Moving" class="image-thumb" onclick="openLightbox(this)">
         </div>
     </section>
+
+    <!-- Lightbox Popup -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Large View">
+    </div>
 
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2025 Vijaya Durga Cranes Kadapa. All rights reserved.</p>
     </footer>
 
-    <!-- Swiper JS -->
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        // Initialize Swiper for Image Slider
-        var swiper = new Swiper('.swiper-container', {
-            loop: true,
-            slidesPerView: 3,  // Show 3 images at a time
-            spaceBetween: 10,   // Space between images
-            autoplay: {
-                delay: 3000, // Change slides every 3 seconds
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
+        // Function to open lightbox
+        function openLightbox(imgElement) {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = imgElement.src; // Set the source of lightbox image
+            lightbox.style.display = 'flex'; // Show lightbox
+        }
+
+        // Function to close lightbox
+        function closeLightbox() {
+            var lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none'; // Hide lightbox
+        }
     </script>
 </body>
-
 </html>
