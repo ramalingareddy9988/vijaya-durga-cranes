@@ -5,10 +5,10 @@
     box-sizing: border-box;
 }
 
-/* Set a colorful gradient background */
+/* Set the background to black and white text */
 body {
-    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient from pink to orange */
-    color: white;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
     font-family: Arial, sans-serif;
     text-align: center;
     height: 100%;
@@ -19,7 +19,7 @@ body {
 /* Header Section */
 header {
     padding: 50px 20px;
-    background-color: rgba(0, 0, 0, 0.6); /* Transparent dark background */
+    background-color: #111; /* Darker black background for header */
     text-align: center;
 }
 
@@ -41,7 +41,7 @@ h1 {
 header p {
     font-size: 18px;
     font-weight: 300;
-    color: #fff;
+    color: #ccc; /* Lighter gray text for description */
 }
 
 /* Navigation Menu */
@@ -68,7 +68,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background-color: #f06;
+    background-color: #f06; /* Soft red hover effect */
 }
 
 /* Sections */
@@ -85,13 +85,14 @@ h2 {
 
 /* Services Section */
 .services {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: #222; /* Dark gray background for services */
     border-radius: 8px;
     padding: 40px;
+    margin-bottom: 30px;
 }
 
 .service {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #333; /* Slightly lighter gray for each service box */
     padding: 20px;
     margin-bottom: 30px;
     border-radius: 8px;
@@ -106,7 +107,7 @@ h2 {
 .service p {
     font-size: 18px;
     line-height: 1.6;
-    color: #fff;
+    color: #ccc; /* Light gray text for descriptions */
 }
 
 .service ul {
@@ -123,12 +124,12 @@ h2 {
 /* About Section */
 #about p {
     font-size: 18px;
-    color: #fff;
+    color: #ccc; /* Light gray text for about section */
 }
 
 /* Contact Section */
 .contact {
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: #222; /* Dark gray background for contact section */
     border-radius: 8px;
     padding: 40px;
     margin-top: 20px;
@@ -136,7 +137,7 @@ h2 {
 
 .contact p {
     font-size: 18px;
-    color: #fff;
+    color: #ccc; /* Light gray text */
 }
 
 /* Images Section */
