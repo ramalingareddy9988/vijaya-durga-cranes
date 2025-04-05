@@ -99,3 +99,14 @@ footer {
     color: white;
     margin-top: 40px;
 }
+
+/* Contact Box */
+.contact-box {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
