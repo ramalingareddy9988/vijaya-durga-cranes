@@ -82,7 +82,7 @@ h2 {
 }
 
 .swiper-slide img {
-    width: 80%; /* Image size adjustments */
+    width: 80%; /* Adjust the image size */
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
