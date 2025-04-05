@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vijaya Durga Cranes Kadapa</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Include Swiper.js for image slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -68,13 +70,24 @@
         <p>Vijaya Durga Cranes Kadapa has been serving the Kadapa region for years, providing top-notch crane rental and earth-moving services for both residential and commercial projects. Our commitment to safety, efficiency, and quality makes us a preferred partner for all heavy machinery needs.</p>
     </section>
 
-    <!-- Images Section -->
+    <!-- Images Section (Image Slider) -->
     <section id="images">
         <h2>Our Work</h2>
-        <div class="image-gallery">
-            <img src="images/crane1.jpg" alt="Crane in action" class="gallery-img">
-            <img src="images/crane2.jpg" alt="Lifting heavy equipment" class="gallery-img">
-            <img src="images/earth-moving1.jpg" alt="Earth moving project" class="gallery-img">
+        <!-- Swiper Image Slider -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="images/crane1.jpg" alt="Crane in action">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/crane2.jpg" alt="Lifting heavy equipment">
+                </div>
+                <div class="swiper-slide">
+                    <img src="images/earth-moving1.jpg" alt="Earth moving project">
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
         </div>
     </section>
 
@@ -82,6 +95,23 @@
     <footer>
         <p>&copy; 2025 Vijaya Durga Cranes Kadapa. All rights reserved.</p>
     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        // Initialize Swiper for Image Slider
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            autoplay: {
+                delay: 3000, // Change slides every 3 seconds
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
 </body>
 
 </html>
