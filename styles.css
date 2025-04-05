@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -31,44 +31,13 @@ header nav ul li a {
 
 h2 {
     color: #333;
-    font-size: 24px;
-    text-align: center;
 }
 
-/* Image Gallery Section */
-.image-gallery {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    flex-wrap: wrap;
-    text-align: center;
+.service {
+    margin-bottom: 20px;
 }
 
-.gallery-img {
-    width: 300px; /* "Greeting Card" size */
-    height: 200px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-/* Hover effect on images */
-.gallery-img:hover {
-    transform: scale(1.05); /* Zoom effect on hover */
-}
-
-/* Footer Section */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-    margin-top: 40px;
-}
-
-/* Contact Box */
+/* Floating Contact Box */
 .contact-box {
     position: fixed;
     top: 20px;
@@ -77,4 +46,58 @@ footer {
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 200px;
+}
+
+/* Services Section */
+.services {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.services .service {
+    margin-bottom: 30px;
+}
+
+.services h3 {
+    color: #2c3e50;
+}
+
+/* Image Slider */
+.swiper-container {
+    width: 100%;
+    height: 500px; /* Adjusted height for larger images */
+    margin: 20px 0;
+}
+
+.swiper-wrapper {
+    display: flex;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 90%; /* Adjusted size for bigger images */
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Pagination Style */
+.swiper-pagination {
+    bottom: 10px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
 }
