@@ -42,9 +42,10 @@ h2 {
     margin-top: 20px;
 }
 
+/* Updated image size for larger images */
 .image-gallery img {
-    width: 300px;
-    height: 200px;
+    width: 500px; /* Increased width */
+    height: 350px; /* Increased height */
     object-fit: cover;
     border-radius: 8px;
 }
