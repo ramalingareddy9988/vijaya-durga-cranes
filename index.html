@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Vijaya Durga Cranes Kadapa offers crane rental, earth-moving, and heavy equipment transport services in Kadapa.">
+    <meta name="keywords" content="crane rental, earth moving, heavy equipment transport, Kadapa">
     <title>Vijaya Durga Cranes Kadapa</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Include Swiper.js for image slider -->
@@ -14,7 +16,7 @@
     <!-- Header Section -->
     <header>
         <div class="logo-container">
-            <img src="logo.png" alt="Vijaya Durga Cranes Kadapa" class="logo">
+            <img src="logo.png" alt="Vijaya Durga Cranes Kadapa Logo" class="logo">
         </div>
         <h1>Welcome to Vijaya Durga Cranes Kadapa</h1>
         <p>Your trusted partner for heavy machinery and earth-moving services in Kadapa.</p>
@@ -77,13 +79,13 @@
         <div class="swiper-container">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <img src="images/crane1.JPG" alt="Crane in action">
+                    <img src="images/crane1.JPG" alt="Crane lifting heavy load at construction site">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/crane2.JPG" alt="Lifting heavy equipment">
+                    <img src="images/crane2.JPG" alt="Heavy equipment being lifted with crane">
                 </div>
                 <div class="swiper-slide">
-                    <img src="images/earth-moving1.JPG" alt="Earth moving project">
+                    <img src="images/earth-moving1.JPG" alt="Excavation and earth-moving at site">
                 </div>
             </div>
             <!-- Add Pagination -->
@@ -99,7 +101,7 @@
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
-        // Initialize Swiper for Image Slider
+        // Initialize Swiper for Image Slider with advanced settings
         var swiper = new Swiper('.swiper-container', {
             loop: true,
             autoplay: {
@@ -110,6 +112,12 @@
                 el: '.swiper-pagination',
                 clickable: true,
             },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'fade', // Smooth fade transition between images
+            speed: 1000, // Set transition speed for each slide
         });
     </script>
 </body>
